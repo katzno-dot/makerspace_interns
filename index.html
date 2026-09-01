@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Makerspace — Internship Mission Guide</title>
+<meta name="description" content="An interactive mission guide to the Makerspace internship: seven missions, one tool discovery guide, and a catalogue worth passing on.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- progress rail -->
+<div class="progress-rail" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
+
+<!-- ============ NAV ============ -->
+<nav class="topnav">
+  <a class="topnav__brand" href="#top">
+    <span class="topnav__mark"></span> The Makerspace
+  </a>
+  <button class="topnav__toggle" id="navToggle" aria-label="Open mission list" aria-expanded="false">Missions</button>
+  <div class="topnav__menu" id="navMenu">
+    <a href="#hero-map" data-scroll>Mission Map</a>
+    <a href="#missions" data-scroll>Missions</a>
+    <a href="#discovery-guide" data-scroll>Discovery Guide</a>
+    <a href="#cycle" data-scroll>The Cycle</a>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="hero">
+    <div class="hero__burst" aria-hidden="true">
+      <svg viewBox="0 0 600 600" class="burst-svg">
+        <g class="burst-rays"></g>
+        <circle cx="300" cy="300" r="130" class="burst-core"></circle>
+        <circle cx="300" cy="300" r="130" class="burst-core-ring"></circle>
+      </svg>
+    </div>
+    <p style="font-size: 1.5rem; position: relative; top: 42px;" class="hero__eyebrow">Internship Mission</p>
+    <h1 style="font-size: 25px; position: relative; top: 33px;" class="hero__title">The Makerspace</h1>
+    <p style="font-size: 0.9rem; width: 223px;" class="hero__lede">You're not expected to know every tool. You're expected to be curious, careful, and responsible &mdash; and to leave the space more understandable than you found it.</p>
+    <a href="#hero-map" class="btn btn--primary" data-scroll>Start Mission 1</a>
+  </header>
+
+  <!-- ============ MISSION MAP (trail) ============ -->
+  <section class="section section--map" id="hero-map">
+    <div class="wrap">
+      <h2 class="section__title">Your Mission Trail</h2>
+      <p class="section__sub">Eight stops between "new intern" and "trusted teammate." Tap any stop to jump there.</p>
+
+      <div class="trail" id="trail">
+        <svg class="trail__line" viewBox="0 0 1000 140" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M 20 70 Q 125 10, 145 70 T 270 70 T 395 70 T 520 70 T 645 70 T 770 70 T 895 70 L 980 70" />
+        </svg>
+        <button class="trail__node" data-target="mission-1" style="--i:0"><span class="trail__num">1</span><span class="trail__label">Join the Team</span></button>
+        <button class="trail__node" data-target="mission-2" style="--i:1"><span class="trail__num">2</span><span class="trail__label">Map the Space</span></button>
+        <button class="trail__node" data-target="mission-3" style="--i:2"><span class="trail__num">3</span><span class="trail__label">Plan the Catalogue</span></button>
+        <button class="trail__node" data-target="mission-4" style="--i:3"><span class="trail__num">4</span><span class="trail__label">Build the Guide</span></button>
+        <button class="trail__node" data-target="mission-5" style="--i:4"><span class="trail__num">5</span><span class="trail__label">First Investigation</span></button>
+        <button class="trail__node" data-target="mission-6" style="--i:5"><span class="trail__num">6</span><span class="trail__label">Review &amp; Upgrade</span></button>
+        <button class="trail__node" data-target="mission-7" style="--i:6"><span class="trail__num">7</span><span class="trail__label">Lead One Yourself</span></button>
+        <button class="trail__node trail__node--final" data-target="mission-final" style="--i:7"><span class="trail__num">F</span><span class="trail__label">Pass It On</span></button>
+      </div>
+    </div>
+  </section>
+
+  <div id="missions">
+
+  <!-- ============ MISSION 1 ============ -->
+  <section class="mission mission--1" id="mission-1">
+    <div class="wrap mission__grid">
+      <div class="mission__intro">
+        <span class="mission__tag">Mission 1</span>
+        <h2 class="mission__title">Join the Team</h2>
+        <p class="mission__copy">Discover what it means to be a makerspace intern. It isn't about knowing everything on day one &mdash; it's about how you show up.</p>
+        <div class="goal-banner"><span class="goal-banner__label">Mission goal</span> Become someone the team can trust.</div>
+      </div>
+      <ul class="trait-grid">
+        <li class="trait-card"><span class="trait-card__mark">R</span>Take on real responsibilities</li>
+        <li class="trait-card"><span class="trait-card__mark">Q</span>Ask useful questions</li>
+        <li class="trait-card"><span class="trait-card__mark">L</span>Look carefully before acting</li>
+        <li class="trait-card"><span class="trait-card__mark">S</span>Follow safety boundaries</li>
+        <li class="trait-card"><span class="trait-card__mark">E</span>Learn from mistakes &amp; new evidence</li>
+        <li class="trait-card"><span class="trait-card__mark">C</span>Contribute something useful</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ MISSION 2 ============ -->
+  <section class="mission mission--2" id="mission-2">
+    <div class="wrap mission__grid mission__grid--reverse">
+      <div class="mission__intro">
+        <span class="mission__tag">Mission 2</span>
+        <h2 class="mission__title">Map the Makerspace</h2>
+        <p class="mission__copy">Explore every zone before you touch a single tool. A good intern reads the room first.</p>
+        <p class="mission__notice-title">In every zone, notice:</p>
+        <ul class="check-list">
+          <li>What happens here</li>
+          <li>Which tools &amp; materials belong</li>
+          <li>Who uses the space</li>
+          <li>What hazards may be present</li>
+          <li>What safety rules protect people &amp; equipment</li>
+        </ul>
+        <div class="goal-banner"><span class="goal-banner__label">Mission goal</span> Learn to read the space before using anything in it.</div>
+      </div>
+      <ul class="zone-grid">
+        <li class="zone-card zone-card--build"><span class="zone-card__mark">B</span><span>Building</span></li>
+        <li class="zone-card zone-card--textiles"><span class="zone-card__mark">T</span><span>Textiles</span></li>
+        <li class="zone-card zone-card--digital"><span class="zone-card__mark">D</span><span>Digital Fabrication</span></li>
+        <li class="zone-card zone-card--cooking"><span class="zone-card__mark">C</span><span>Cooking</span></li>
+        <li class="zone-card zone-card--growing"><span class="zone-card__mark">G</span><span>Growing</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ MISSION 3 ============ -->
+  <section class="mission mission--3" id="mission-3">
+    <div class="wrap mission__grid">
+      <div class="mission__intro">
+        <span class="mission__tag">Mission 3</span>
+        <h2 class="mission__title">Plan the Tool Catalogue</h2>
+        <p class="mission__copy">Your class has an important assignment: build a Makerspace Tool Catalogue for the interns who come after you. It helps beginners prepare &mdash; it never replaces teacher instruction.</p>
+        <div class="goal-banner"><span class="goal-banner__label">Mission goal</span> Create a useful contribution that makes the makerspace easier to understand.</div>
+      </div>
+      <div class="catalogue-card">
+        <p class="catalogue-card__heading">The catalogue helps future interns discover&hellip;</p>
+        <ol class="catalogue-card__list">
+          <li>What tools are available</li>
+          <li>Where each tool is located</li>
+          <li>What each tool is designed to do</li>
+          <li>How it works</li>
+          <li>What can be made or explored with it</li>
+          <li>What safety preparation is required</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MISSION 4 — DISCOVERY GUIDE ============ -->
+  <section class="mission mission--4" id="mission-4">
+    <div class="wrap">
+      <div class="mission__intro mission__intro--center">
+        <span class="mission__tag">Mission 4</span>
+        <h2 class="mission__title">Build the Tool Discovery Guide</h2>
+        <p class="mission__copy">Before your class can catalogue many tools, you need a dependable way to investigate each one. These eleven questions become your team's Tool Discovery Guide &mdash; flip each card to see why it matters.</p>
+      </div>
+
+      <div class="flip-grid" id="discovery-guide">
+        <!-- flip cards injected by JS from DISCOVERY array -->
+      </div>
+
+      <div class="goal-banner goal-banner--center"><span class="goal-banner__label">Mission goal</span> Develop a careful investigation process you can repeat all course long.</div>
+    </div>
+  </section>
+
+  <!-- ============ MISSION 5 — STEPPER ============ -->
+  <section class="mission mission--5" id="mission-5">
+    <div class="wrap">
+      <div class="mission__intro mission__intro--center">
+        <span class="mission__tag">Mission 5</span>
+        <h2 class="mission__title">Complete the First Tool Investigation</h2>
+        <p class="mission__copy">Your team uses the Tool Discovery Guide for the first time, with close teacher support. Step through the process below.</p>
+      </div>
+
+      <div class="stepper" id="stepper">
+        <div class="stepper__track">
+          <button class="stepper__dot" data-step="0">1</button>
+          <button class="stepper__dot" data-step="1">2</button>
+          <button class="stepper__dot" data-step="2">3</button>
+          <button class="stepper__dot" data-step="3">4</button>
+          <button class="stepper__dot" data-step="4">5</button>
+          <button class="stepper__dot" data-step="5">6</button>
+          <button class="stepper__dot" data-step="6">7</button>
+          <button class="stepper__dot" data-step="7">8</button>
+        </div>
+        <div class="stepper__panel" id="stepperPanel"></div>
+        <div class="stepper__controls">
+          <button class="btn btn--ghost" id="stepPrev">Back</button>
+          <button class="btn btn--primary" id="stepNext">Next</button>
+        </div>
+      </div>
+
+      <p class="callout">Your first idea may not be correct &mdash; and that's part of the mission. Strong interns change their explanations when they discover better evidence.</p>
+      <div class="goal-banner goal-banner--center"><span class="goal-banner__label">Mission goal</span> Turn an unfamiliar tool into a clear, trustworthy catalogue entry.</div>
+    </div>
+  </section>
+
+  <!-- ============ MISSION 6 ============ -->
+  <section class="mission mission--6" id="mission-6">
+    <div class="wrap mission__grid mission__grid--reverse">
+      <div class="mission__intro">
+        <span class="mission__tag">Mission 6</span>
+        <h2 class="mission__title">Review and Upgrade</h2>
+        <p class="mission__copy">After the first investigation, your team reviews both its work and the Tool Discovery Guide itself &mdash; then upgrades it before using it again.</p>
+        <div class="goal-banner"><span class="goal-banner__label">Mission goal</span> Make the investigation process clearer, safer, and more useful.</div>
+      </div>
+      <ul class="check-card-list" id="reviewChecklist">
+        <li><button class="check-card"><span class="check-card__box"></span>Did we collect the right information?</button></li>
+        <li><button class="check-card"><span class="check-card__box"></span>Which questions helped us most?</button></li>
+        <li><button class="check-card"><span class="check-card__box"></span>What did we overlook?</button></li>
+        <li><button class="check-card"><span class="check-card__box"></span>Did we separate evidence from guesses?</button></li>
+        <li><button class="check-card"><span class="check-card__box"></span>Did we make responsible safety decisions?</button></li>
+        <li><button class="check-card"><span class="check-card__box"></span>How can we improve next time?</button></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ MISSION 7 ============ -->
+  <section class="mission mission--7" id="mission-7">
+    <div class="wrap mission__grid">
+      <div class="mission__intro">
+        <span class="mission__tag">Mission 7</span>
+        <h2 class="mission__title">Lead a New Investigation</h2>
+        <p class="mission__copy">Choose a new unfamiliar tool and repeat the mission &mdash; this time with greater responsibility. You'll still need teacher approval for hands-on exploration, but your team owns more of the process.</p>
+        <div class="goal-banner"><span class="goal-banner__label">Mission goal</span> Show that your discovery process works with a new tool in a new situation.</div>
+      </div>
+      <ul class="chip-grid">
+        <li class="chip">Organizing the investigation</li>
+        <li class="chip">Dividing team roles</li>
+        <li class="chip">Finding reliable information</li>
+        <li class="chip">Planning safe tests</li>
+        <li class="chip">Deciding when to stop or dig further</li>
+        <li class="chip">Explaining your conclusions</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ FINAL MISSION ============ -->
+  <section class="mission mission--final" id="mission-final">
+    <div class="wrap mission-final__inner">
+      <span class="mission__tag mission__tag--final">Final Mission</span>
+      <h2 class="mission-final__title">Pass It On</h2>
+      <p class="mission-final__copy">Every completed investigation adds another entry to the Makerspace Tool Catalogue. By the end of the internship, you'll know how to approach something unfamiliar, investigate it responsibly, and explain what you discover to others. Your catalogue and Tool Discovery Guide will help prepare the next group of interns.</p>
+      <div class="goal-banner goal-banner--final"><span class="goal-banner__label">Final mission goal</span> Leave the makerspace more understandable than you found it.</div>
+    </div>
+  </section>
+
+  </div><!-- /#missions -->
+
+  <!-- ============ THE CYCLE ============ -->
+  <section class="section section--cycle" id="cycle">
+    <div class="wrap">
+      <h2 class="section__title section__title--light">The Internship Cycle</h2>
+      <p class="section__sub section__sub--light">Every mission runs on the same loop. Once you finish the last step, you begin again.</p>
+
+      <div class="cycle" id="cycleDiagram">
+        <svg class="cycle__ring" viewBox="0 0 480 480" aria-hidden="true">
+          <circle cx="240" cy="240" r="190" class="cycle__ring-track"></circle>
+          <circle cx="240" cy="240" r="190" class="cycle__ring-progress" id="cycleProgress"></circle>
+        </svg>
+        <div class="cycle__center" id="cycleCenter">
+          <span class="cycle__center-index" id="cycleIndex">01</span>
+          <p class="cycle__center-label" id="cycleLabel">Explore the space</p>
+        </div>
+        <div class="cycle__nodes" id="cycleNodes"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>The Makerspace &mdash; Internship Mission Guide</p>
+      <p class="footer__small">Built for interns in grades 6&ndash;8. Curious, careful, responsible.</p>
+    </div>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
