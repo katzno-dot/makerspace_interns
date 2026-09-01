@@ -249,6 +249,8 @@ img,svg{ display:block; max-width:100%; }
   width:34px; height:34px; border-radius:50%; border:2px solid var(--ink);
   display:flex; align-items:center; justify-content:center;
   font-family: "Poppins", sans-serif; font-weight: 900; font-size:0.95rem; background:var(--paper);
+  color: #f3e7cf;
+  background-color: #a73f1e;
 }
 .trait-card:nth-child(3n+1){ background:var(--mustard-lt); }
 .trait-card:nth-child(3n+2){ background:var(--paper); }
@@ -394,5 +396,8 @@ img,svg{ display:block; max-width:100%; }
 .footer__small{ font-size:0.85rem; }
 
 /* ============ scroll reveal ============ */
-.reveal{ opacity:0; transform:translateY(24px); transition:opacity .6s ease, transform .6s ease; }
+.reveal{ opacity:0; transform:translateY(24px); transition:opacity 0.4s ease, transform .6s ease; }
 .reveal.is-visible{ opacity:1; transform:translateY(0); }
+
+#cycleNodes {
+}
